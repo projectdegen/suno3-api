@@ -1,5 +1,6 @@
 import Section from "./components/Section";
 import Markdown from 'react-markdown';
+import React from 'react';
 
 
 export default function Home() {
@@ -18,7 +19,7 @@ We update quickly, please star us on Github:  [github.com/gcui-art/suno-api](htt
 ## 🌟 Features
 
 - Perfectly implements the creation API from \`app.suno.ai\`
-- Compatible with the format of OpenAI’s \`/v1/chat/completions\` API.
+- Compatible with the format of OpenAI's \`/v1/chat/completions\` API.
 - Automatically keep the account active.
 - Supports \`Custom Mode\`
 - One-click deployment to Vercel
@@ -60,7 +61,7 @@ npm install
 
 - If deployed to Vercel, please add an environment variable \`SUNO_COOKIE\` in the Vercel dashboard, with the value of the cookie obtained in the first step.
 
-- If you’re running this locally, be sure to add the following to your \`.env\` file:
+- If you're running this locally, be sure to add the following to your \`.env\` file:
 
   \`\`\`bash
   SUNO_COOKIE=<your-cookie>
@@ -68,7 +69,7 @@ npm install
 
 ### 4. Run suno-api
 
-- If you’ve deployed to Vercel:
+- If you've deployed to Vercel:
   - Please click on Deploy in the Vercel dashboard and wait for the deployment to be successful.
   - Visit the \`https://<vercel-assigned-domain>/api/get_limit\` API for testing.
 - If running locally:
@@ -98,7 +99,7 @@ Suno API currently mainly implements the following APIs:
 \`\`\`bash
 - \`/api/generate\`: Generate music
 - \`/v1/chat/completions\`: Generate music - Call the generate API in a format 
-  that works with OpenAI’s API.
+  that works with OpenAI's API.
 - \`/api/custom_generate\`: Generate music (Custom Mode, support setting lyrics, 
   music style, title, etc.)
 - \`/api/generate_lyrics\`: Generate lyrics based on prompt
